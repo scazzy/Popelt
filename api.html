@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Popelt - Modal Popup jQuery Plugin</title>
+<link rel="stylesheet" href="css/normalize.css" />
+<link rel="stylesheet" href="css/style.css" />
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="minified/popelt-v1.0.min.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+<h1>Popelt</h1>
+<h3>Lightweight Modal Popup jQuery Plugin</h3>
+<hr/>
+
+<p>
+Check: <a href="demo.html">Demo</a> &nbsp;
+<a href="demo.html">Github</a><br />
+Download: <a href="demo.html">Minified</a><small>(5kb)</small> &nbsp; <a href="demo.html">Source</a>
+</p>
+<hr/>
+
+<div class="features">
+<h3>Features</h3>
+<ul>
+	<li>Modal</li>
+    <li>Responsive</li>
+    <li>Dyanmic Buttons</li>
+    <li>Dynamic content - <strong>Ajax</strong>, <strong>Iframe</strong>, or <strong>template</strong></li>
+    <li>First input focus</li>
+    <li>Dynamic positioning</li>
+    <li>Escape to close</li>
+    <li>Multiple / nested popups</li>
+    <li>Dynamic overlay background color and opacity</li>
+    <li>Simple to use</li>
+    <li>IE7+ compatibility</li>
+    <li>Extreme Lightweight (just ~5kb compressed)</li>
+</ul>
+</div>
+
+<div class="features">
+<h3>Example</h3>
+<pre class="code">
+var MyPopup = new popelt({
+    title: 'Pop some cash',
+    content: ''Hey wasup! This is my content.'
+}).show();
+</pre>
+</div>
+
+<div class="methods">
+<h3>Methods</h3>
+<table>
+	<tr>
+    	<th>Method name</th>
+        <th>Parameters</th>
+        <th>Description</th>
+    </tr>
+	<tr>
+    	<td>addButton</td>
+        <td>label [,class] [,clickEvent]</td>
+        <td>
+        	<strong>label</strong> - Name on button<br />
+            <strong>class</strong> - custom class to give to the button [optional]<br />
+            <strong>clickEvent</strong> - Function to execute on click of button. If not provided, by default triggers popup close [optional]
+        </td>
+    </tr>
+    <tr>
+    	<td>setContent</td>
+        <td>content</td>
+        <td>
+        	<strong>content</strong> - Body content of the popup<br />
+            Can be HTML or Plain text
+        </td>
+    </tr>
+    <tr>
+    	<td>show<br />
+        	showPopup
+        </td>
+        <td>-</td>
+        <td>Show the popup</td>
+    </tr>
+    <tr>
+    	<td>close<br />
+	        closePopup<br />
+		</td>
+        <td>-</td>
+        <td>
+        	Close the popup
+        </td>
+    </tr>
+    <tr>
+    	<td>addOKButton</td>
+        <td>clickEvent</td>
+        <td>
+        	Add a button with "OK" as label<br />
+            <strong>clickEvent</strong> - On click event
+        </td>
+    </tr>
+    <tr>
+    	<td>addCloseButton</td>
+        <td>-</td>
+        <td>
+        	Add a button with "Close" as label. It will close the popup
+        </td>
+    </tr>
+    <tr>
+    	<td>addCancelButton</td>
+        <td>-</td>
+        <td>
+        	Add a button with "Cancel" as label. It will close the popup
+        </td>
+    </tr>
+    
+</table>
+</div>
+
+
+<div class="methods">
+<h3>Settings / Attributes</h3>
+<table>
+	<tr>
+    	<th>Setting</th>
+        <th>Values</th>
+        <th>Default</th>
+        <th>Description</th>
+    </tr>
+	<tr>
+    	<td>modal</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td><strong>true</strong> or <strong>false</strong></td>
+    </tr>
+    <tr>
+    	<td>title</td>
+        <td>text</td>
+        <td></td>
+        <td><small><em>Not displayed if empty</em></small></td>
+    </tr>
+    <tr>
+    	<td>content</td>
+        <td>string / html</td>
+        <td></td>
+        <td>Popup body content.<br />
+        	HTML or Text string.<br />
+            <small><em>Not displayed if empty</em></small>
+        </td>
+    </tr>
+    <tr>
+    	<td>width</td>
+        <td>number</td>
+        <td>600</td>
+        <td>Width of the popup.<br />
+        	Accepts percent (%) or pixels (px)
+        </td>
+    </tr>
+    <tr>
+    	<td>maxHeight</td>
+        <td>number</td>
+        <td></td>
+        <td>Give max height to the content container for longer content.<br />
+        	A scrollbar will appear if content overflows.
+        </td>
+    </tr>
+    <tr>
+    	<td>offsetTop</td>
+        <td>number</td>
+        <td>vertically centered</td>
+        <td>If the popup needs to appear some pixels away from the top instead of being vertically centered.
+        </td>
+    </tr>
+    <tr>
+    	<td>responsive</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td> <strong>true</strong> or <strong>false</strong>
+        <br />
+        Width of the popup will be maximum 100%;</td>
+    </tr>
+    <tr>
+    	<td>closeButton</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>Display the <strong>"&times;"</strong> close button on top right.</td>
+    </tr>
+    <tr>
+    	<td>closeBtnTooltip</td>
+        <td>text</td>
+        <td>"Close"</td>
+        <td>Tooltip for the default <strong>"&times;"</strong> clsoe button on top right.<br />
+        	Give <strong>false</strong> if to hide.
+	 </td>
+    </tr>
+    <tr>
+    	<td>overlayColor</td>
+        <td>CSS Color</td>
+        <td>black</td>
+        <td>Change color of the overlay background.<br />
+        	Accepts CSS color names or hex color codes.
+        </td>
+    </tr>
+    <tr>
+    	<td>overlayOpacity</td>
+        <td>0.0 - 1.0</td>
+        <td>0.9</td>
+        <td>Transparency of overlay background. Accepts CSS '<em>opacity</em>' values.</td>
+    </tr>
+    <tr>
+    	<td>focus</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>If want to focus on the first '<em>input</em>' or '<em>textarea</em>' when the popup is opened.</td>
+    </tr>
+    <tr>
+    	<td>keyEsc</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>Allow popup to close by pressing "Escape" or "Esc" key.</td>
+    </tr>
+    <tr>
+    	<td>closeClass</td>
+        <td>string</td>
+        <td>"pop-close"</td>
+        <td>If want any link <strong>&lt;a&gt;</strong> or <strong>button</strong> or any element inside your content to trigger <strong>popup close</strong>, give it this classname.</td>
+    </tr>
+    <tr>
+    	<td>fadeSpeed</td>
+        <td>number</td>
+        <td>200</td>
+        <td>Speed of fade animation while closing popup. Accepts jquery speed value for fadeOut.</td>
+    </tr>
+    <tr>
+    	<td>buttons</td>
+        <td>Array object</td>
+        <td></td>
+        <td>Syntax:<br />
+        	<pre class="code">[{ label [,classname] [,clickEvent]}]</pre>
+            
+            Example:<br />
+<pre class="code">
+[
+  { label: 'Save changes', 
+    classname: 'primary', 
+    clickEvent: function(){alert('Saving changes');}
+  },
+  { label: 'Close'}
+]</pre>
+		</td>
+    </tr>
+    <tr>
+    	<td>contentType</td>
+        <td><strong>"ajax"</strong> or <strong>"iframe"</strong> or <strong>#elementID</strong></td>
+        <td></td>
+        <td>
+        	You can add dynamic content via AJAX, or embed a video or a webpage using iframe,<br />
+			or take the content from an existing element in the DOM using '#' (for element ID).
+        </td>
+    </tr>
+    <tr>
+    	<td>loadUrl</td>
+        <td>string</td>
+        <td></td>
+        <td><small>Applied for contentType AJAX and Iframe.</small><br />
+        	Source URL to load via AJAX or iframe.<br /><br />
+
+			<small><em>Note: Currently do not support cross-domain URL for AJAX</em></small>
+        </td>
+    </tr>
+    <tr>
+    	<td>iframeHeight</td>
+        <td>number</td>
+        <td>300px</td>
+        <td>Set height for Iframe content.<br />
+        	<small>Accepts percent (%) or pixels (px)</small><br />
+
+            <small><em>Dynamic height coming soon.</em></small>
+        </td>
+    </tr>
+    <tr>
+    	<td>iframeWidth</td>
+        <td>number</td>
+        <td>100%</td>
+        <td>Set width for the Iframe content.<br />
+        	<small>Accepts percent (%) or pixels (px)</small>
+        </td>
+    </tr>
+</table>
+</div>
+
+
+<div class="features">
+<h3>Coming soon</h3>
+<ul>
+	<li>IFrame dynamic height - Auto content height</li>
+    <li>Forms - Built in form submitting from popup</li>
+</ul>
+</div>
+
+
+<p class="well">
+Check: <a href="demo.html">Demo</a> &nbsp;
+<a href="https://github.com/scazzy/Popelt">Github</a><br />
+Download: <a href="demo.html">Minified</a><small>(5kb)</small> &nbsp; <a href="demo.html">Source</a>
+</p>
+<hr/>
+
+</div>
+</body>
+</html>

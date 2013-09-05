@@ -1,0 +1,23 @@
+/* CSS Document */
+body {font-family:'PTSans';}
+
+/* POPELT CSS */
+.noscroll {overflow:hidden;}
+.pop-screen {background:#000; opacity:0.9; filter:alpha(90); position:fixed; left:0; top:0; right:0; bottom:0; z-index:9994; display:none;}
+.pop-wrap {position:fixed; left:0;right:0;top:0;bottom:0; z-index:9995; overflow:auto; display:none; }
+.pop-container {margin:40px auto; display:block; width:600px; background:white;}
+.pop-content {padding:20px; padding-top:10px; color:#333; word-wrap:break-word; overflow:auto;}
+.pop-content h1:first-child, .pop-content h2:first-child, .pop-content p:first-child {margin-top:0;}
+.pop-action-block {background:#eee; padding:20px; border-top:1px solid #ccc; text-align:right;}
+.pop-title {margin:0; margin-bottom:10px; padding-bottom:10px; font-size:26px; font-weight:bold; line-height:28px; padding:20px; margin-bottom:0;}
+.pop-btn-close {font-weight:bold; color:#999; float:right; font-size:20px; width:30px; height:30px; line-height:28px; text-align:center; cursor:pointer; border-radius:50%; position:relative; right:5px; top:5px;}
+
+/* Demo page css */
+a,a:link,a:visited {color:#0769AD; text-decoration:none; border-bottom:1px dashed;}
+.wrapper {padding:20px;}
+hr {height:1px; border:0; background:#ccc;}
+.well, .code {padding:20px; border:1px solid rgba(0, 0, 0, 0.15); background:#f5f5f5; border-radius:4px; -webkit-border-radius:4px; -moz-border-radius:4px;}
+
+table {min-width:400px; border:1px solid #ddd; border-width:1px 1px 0 0;}
+table th {background:#eee; text-align:left; border:1px solid #ddd; border-width:0 0 1px 1px; padding:5px 8px;}
+table td {border:1px solid #ddd; border-width:0 0 1px 1px; padding:5px 8px;}
