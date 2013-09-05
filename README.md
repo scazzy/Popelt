@@ -1,20 +1,18 @@
-Popelt
-======
+# Popelt
 
 ### Lightweight Modal Popup jQuery Plugin
 
 * * *
 
-Check: [Demo](demo.html) &nbsp;
+Check: [Demo](http://welbour.com/labs/popelt/) &nbsp;
 [Github](https://github.com/scazzy/Popelt)
 
 Download: [Minified](https://github.com/scazzy/Popelt/blob/master/minified/popelt-v1.0.min.js)<small>(5kb)</small> &nbsp; [Source](https://github.com/scazzy/Popelt/blob/master/source/popelt-v1.0-source.js)
 
 * * *
 
-<div class="features">
+> ## Features
 
-### Features
 
 *   Modal
 *   Responsive
@@ -28,11 +26,9 @@ Download: [Minified](https://github.com/scazzy/Popelt/blob/master/minified/popel
 *   Simple to use
 *   IE7+ compatibility
 *   Extreme Lightweight (just ~5kb compressed)
-</div>
 
-<div class="features">
 
-### Example
+> ## Example
 
 <pre class="code">
 var MyPopup = new popelt({
@@ -40,14 +36,12 @@ var MyPopup = new popelt({
     content: ''Hey wasup! This is my content.'
 }).show();
 </pre>
-</div>
 
-<div class="methods">
 
-### Methods
+> ## Methods
 
 <table>
-	<tr>
+    <tr>
     	<th>Method name</th>
         <th>Parameters</th>
         <th>Description</th>
@@ -116,11 +110,9 @@ var MyPopup = new popelt({
     </tr>
 
 </table>
-</div>
 
-<div class="methods">
 
-### Settings / Attributes
+> ## Settings / Attributes
 
 <table>
 	<tr>
@@ -301,24 +293,21 @@ var MyPopup = new popelt({
         </td>
     </tr>
 </table>
-</div>
 
-<div class="requirements">
 
-### Requires
+> ## Requires
 
 *   jQuery 1.9.1 or above
-</div>
 
-<div class="features">
 
-### Coming soon
+> ## Coming soon
 
 *   IFrame dynamic height - Auto content height
 *   Forms - Built in form submitting from popup
-</div>
 
-Check: [Demo](demo.html) &nbsp;
+* * *
+
+Check: [Demo](http://welbour.com/labs/popelt/) &nbsp;
 [Github](https://github.com/scazzy/Popelt)
 
 Download: [Minified](https://github.com/scazzy/Popelt/blob/master/minified/popelt-v1.0.min.js)<small>(5kb)</small> &nbsp; [Source](https://github.com/scazzy/Popelt/blob/master/source/popelt-v1.0-source.js)
