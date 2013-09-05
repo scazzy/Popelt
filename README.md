@@ -124,7 +124,7 @@ var MyPopup = new popelt({
 	<tr>
     	<td>modal</td>
         <td>boolean</td>
-        <td>true</td>
+        <td>false</td>
         <td>**true** or **false**</td>
     </tr>
     <tr>
@@ -214,7 +214,7 @@ var MyPopup = new popelt({
         <td>If want to focus on the first '_input_' or '_textarea_' when the popup is opened.</td>
     </tr>
     <tr>
-    	<td>keyEsc</td>
+    	<td>escClose</td>
         <td>boolean</td>
         <td>true</td>
         <td>Allow popup to close by pressing "Escape" or "Esc" key.</td>
