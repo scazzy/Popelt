@@ -11,7 +11,7 @@ Download: [Minified](https://github.com/scazzy/Popelt/blob/master/minified/popel
 
 * * *
 
-> ## Features
+### Features
 
 
 *   Modal
@@ -28,7 +28,7 @@ Download: [Minified](https://github.com/scazzy/Popelt/blob/master/minified/popel
 *   Extreme Lightweight (just ~5kb compressed)
 
 
-> ## Example
+### Example
 
 <pre class="code">
 var MyPopup = new popelt({
@@ -38,7 +38,7 @@ var MyPopup = new popelt({
 </pre>
 
 
-> ## Methods
+### Methods
 
 <table>
     <tr>
@@ -112,7 +112,7 @@ var MyPopup = new popelt({
 </table>
 
 
-> ## Settings / Attributes
+### Settings / Attributes
 
 <table>
 	<tr>
@@ -295,12 +295,12 @@ var MyPopup = new popelt({
 </table>
 
 
-> ## Requires
+### Requires
 
 *   jQuery 1.9.1 or above
 
 
-> ## Coming soon
+### Coming soon
 
 *   IFrame dynamic height - Auto content height
 *   Forms - Built in form submitting from popup
