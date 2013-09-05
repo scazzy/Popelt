@@ -6,25 +6,342 @@
 </head>
 
 <body>
-Proper demo coming soon..
 
-<div class="pop-screen"></div>
-<div class="pop-wrap">
-	<div class="pop-container">
-        <div class="pop-block">
-        	<span class="pop-btn-close">&times;</span>
-        	<div class="pop-title">Popup title </div>
-            <div class="pop-content">
-                <p>You won't be able to dismiss this by usual means (escape or click button), but you can close it programatically based on user choices or actions.</p>
-                <p><a href="#" class="pop-close">Dismiss</a></p>
-                
-            </div>
-            <div class="pop-action-block">
-            	<button class="btn btn-primary">Send</button>
-            	<button class="btn">Cancel</button>
-            </div>
-        </div>
-    </div>
+
+<div class="wrapper">
+<h1>Popelt</h1>
+<h3>Lightweight Modal Popup jQuery Plugin</h3>
+<hr/>
+
+<p>
+Github: <a href="https://github.com/scazzy/Popelt">Github</a><br />
+Download: <a href="https://github.com/scazzy/Popelt/blob/master/minified/popelt-v1.0.min.js">Minified</a><small>(5kb)</small> &nbsp; <a href="https://github.com/scazzy/Popelt/blob/master/source/popelt-v1.0-source.js">Source</a>
+</p>
+<hr/>
+
+
+<div class="demo-block">
+<h3>Hello World</h3>
+<button id="dmo_hello_world" class="btn floatr" />Demo</button>
+Simple popup with a Title and a Description.<br />
+<small>It can be closed by pressing Escape key or clicking the black background.</small>
+
+<pre class="code">
+var p = new popelt({
+    title: 'Hello World!',
+    content: 'Lorem ipsum dolar sit amet.',
+}).show();
+</pre>
 </div>
+<script type="text/javascript">
+$('#dmo_hello_world').click(function(){
+	var p = new popelt({title: 'Hello World!',
+		content: 'Lorem ipsum dolar sit amet.',
+		modal: false
+	}).show();
+});
+</script>
+
+
+
+<div class="demo-block">
+<h3>Adding buttons</h3>
+<button id="dmo_buttons" class="btn floatr" />Demo</button>
+Popup with 2 buttons 
+
+<pre class="code">
+var p = new popelt({
+    title: 'Are you sure you want to do this?',
+    content: ''
+});
+p.addButton('Yes, proceed', function(){
+    alert('You clicked YES');
+});
+p.show();
+</pre>
+</div>
+<script type="text/javascript">
+$('#dmo_buttons').click(function(){
+	var p = new popelt({
+		title: 'Are you sure you want to do this?',
+		content: '',
+		closeButton: false,
+		escClose: false,
+		modal: true
+	});
+	p.addButton('Yes, proceed', function(){
+		alert('You clicked YES');
+		p.close();
+	});
+	p.addCancelButton();
+	p.show();
+});
+</script>
+
+
+
+<div class="demo-block">
+<h3>OffsetTop and Width</h3>
+<button id="dmo_offset" class="btn floatr" />Demo</button>
+Giving specific offset from top and width to the popup
+
+<pre class="code">
+var p = new popelt({title: 'Testing offset and width',
+    content: 'Lorem ipsum dolar sit amet.',
+    offsetTop: 40,
+    width: 300
+}).show();
+</pre>
+</div>
+<script type="text/javascript">
+$('#dmo_offset').click(function(){
+	var p = new popelt({title: 'Testing offset and width',
+		content: 'Lorem ipsum dolar sit amet.',
+		offsetTop: 40,
+		width: 300
+	}).show();
+});
+</script>
+
+
+
+<div class="demo-block">
+<h3>CloseClass and closeBtnTooltip</h3>
+<button id="dmo_close" class="btn floatr" />Demo</button>
+Giving specific offset from top and width to the popup
+
+<pre class="code">
+var p = new popelt({title: 'A close test',
+    content: "Hover on the close (&times;) button for tooltip" + 
+            "Now click on the below 'Dismiss' link" +
+            "&lt;a href='#' class='btn-close'&gt;Dismiss&lt;/a&gt;" +
+            "This is all within the content",
+    closeClass: 'btn-close',
+    closeBtnTooltip: 'Click here for magic'
+}).show();
+</pre>
+</div>
+<script type="text/javascript">
+$('#dmo_close').click(function(){
+	var p = new popelt({title: 'A close test',
+        content: "Hover on the close (&times;) button for tooltip<br /><br />" + 
+				"Now click on the below 'Dismiss' link<br /><br />" +
+				"<a href='#' class='btn-close'>Dismiss</a><br /><br />" +
+				"This is all within the content",
+    closeClass: 'btn-close',
+	closeBtnTooltip: 'Click here for magic'
+}).show();
+});
+</script>
+
+
+
+<div class="demo-block">
+<h3>Overlay background</h3>
+<button id="dmo_overlay" class="btn floatr" />Demo</button>
+Changing overlay color and opacity
+
+<pre class="code">
+var p = new popelt({
+    title: 'Overlay',
+    content: "Some content",
+    overlayColor: '#f00',
+    overlayOpacity: 0.5
+}).show();
+</pre>
+</div>
+<script type="text/javascript">
+$('#dmo_overlay').click(function(){
+	var p = new popelt({
+		title: 'Overlay',
+		content: "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>",
+		overlayColor: '#f00',
+		overlayOpacity: 0.5
+	}).show();
+});
+</script>
+
+
+
+<div class="demo-block">
+<h3>Fadespeed</h3>
+<button id="dmo_fadespeed" class="btn floatr" />Demo</button>
+Changes the fading animation speed while closing
+
+<pre class="code">
+var p = new popelt({
+    title: 'Overlay',
+    content: "Some content",
+    fadeSpeed: 2000
+}).show();
+</pre>
+</div>
+<script type="text/javascript">
+$('#dmo_fadespeed').click(function(){
+	var p = new popelt({
+		title: 'Overlay',
+		content: "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>",
+		fadeSpeed: 2000
+	}).show();
+});
+</script>
+
+
+
+
+<div class="demo-block">
+<h3>AJAX Content</h3>
+<button id="dmo_ajax" class="btn floatr" />Demo</button>
+Retrieving AJAX content.<br />
+Also, the <strong>focus</strong> attribute focuses on the first input element inside content.
+
+<pre class="code">
+var p = new popelt({
+    contentType: 'ajax',
+    loadUrl: 'ajax.html',
+    focus: true
+});
+p.addCloseButton();
+p.show();
+</pre>
+</div>
+<script type="text/javascript">
+$('#dmo_ajax').click(function(){
+	var p = new popelt({
+		contentType: 'ajax',
+		loadUrl: 'ajax.html',
+		focus: true
+	});
+	p.addCloseButton();
+	p.show();
+});
+</script>
+
+
+
+<div class="demo-block">
+<h3>IFrame Content</h3>
+<button id="dmo_iframe" class="btn floatr" />Demo</button>
+Retrieving Iframe content.<br />
+
+<pre class="code">
+var p = new popelt({
+    contentType: 'iframe',
+    loadUrl: "//www.youtube.com/embed/tRVC4BKWaP8",
+    iframeWidth: '100%',
+    iframeHeight: '300px'
+});
+p.addCloseButton();
+p.show();
+</pre>
+</div>
+<script type="text/javascript">
+$('#dmo_iframe').click(function(){
+	var p = new popelt({
+		contentType: 'iframe',
+		loadUrl: "//www.youtube.com/embed/tRVC4BKWaP8",
+		iframeWidth: '100%',
+	    iframeHeight: '300px'
+	});
+	p.addCloseButton();
+	p.show();
+});
+</script>
+
+
+
+
+
+<div class="demo-block">
+<h3>Content from template</h3>
+<button id="dmo_tplcontent" class="btn floatr" />Demo</button>
+Displaying content from DOM page using the element ID
+<br /><br />
+
+Sample content div#test_id_content:
+<div id="test_id_content" class="well">
+This is some dummy sexy content that I want to show in the popup.<br />
+Oh yeah ;)
+</div>
+
+<pre class="code">
+var p = new popelt({
+    contentType: '#test_id_content'
+}).show();
+</pre>
+</div>
+<script type="text/javascript">
+$('#dmo_tplcontent').click(function(){
+	var p = new popelt({
+		contentType: '#test_id_content'
+	}).show();
+});
+</script>
+
+
+
+
+
+<div class="demo-block">
+<h3>MaxHeight</h3>
+<button id="dmo_maxheight" class="btn floatr" />Demo</button>
+Applying max height to popup content
+<br /><br />
+
+<pre class="code">
+var p = new popelt({
+    title: 'This is title',
+    contentType: 'ajax',
+    loadUrl: 'ajax.html',
+    maxHeight: 400
+})
+p.addCloseButton();
+p.show();
+</pre>
+</div>
+<script type="text/javascript">
+$('#dmo_maxheight').click(function(){
+	var p = new popelt({
+		title: 'This is title',
+		contentType: 'ajax',
+		loadUrl: 'ajax.html',
+		maxHeight: 400
+	})
+	p.addCloseButton();
+	p.show();
+});
+</script>
+
+
+<div class="demo-block">
+<h3>Responsive</h3>
+<button id="dmo_responsive" class="btn floatr" />Demo</button>
+Making the popup responsive
+<br /><br />
+
+<pre class="code">
+var p = new popelt({
+    title: 'This is title',
+    content: "Some content,
+    responsive: true
+})
+p.addCloseButton();
+p.show();
+</pre>
+</div>
+<script type="text/javascript">
+$('#dmo_responsive').click(function(){
+	var p = new popelt({
+		title: 'This is title',
+		content: "<p><strong>Try resizing your browser.</strong></p><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>",
+		responsive: true
+	})
+	p.addCloseButton();
+	p.show();
+});
+</script>
+
+
+
 </body>
 </html>
