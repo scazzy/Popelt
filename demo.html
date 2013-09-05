@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="css/style.css" />
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script type="text/javascript" src="minified/popelt-v1.0.min.js"></script>
+<script type="text/javascript" src="minified/Popelt-v1.0.min.js"></script>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
 
 <p>
 Github: <a href="https://github.com/scazzy/Popelt">Github</a><br />
-Download: <a href="https://github.com/scazzy/Popelt/blob/master/minified/popelt-v1.0.min.js">Minified</a><small>(5kb)</small> &nbsp; <a href="https://github.com/scazzy/Popelt/blob/master/source/popelt-v1.0-source.js">Source</a>
+Download: <a href="https://github.com/scazzy/Popelt/blob/master/minified/Popelt-v1.0.min.js">Minified</a><small>(5kb)</small> &nbsp; <a href="https://github.com/scazzy/Popelt/blob/master/source/Popelt-v1.0-source.js">Source</a>
 </p>
 <hr/>
 
@@ -32,7 +32,7 @@ Simple popup with a Title and a Description.<br />
 <small>It can be closed by pressing Escape key or clicking the black background.</small>
 
 <pre class="code">
-var p = new popelt({
+var p = new Popelt({
     title: 'Hello World!',
     content: 'Lorem ipsum dolar sit amet.',
 }).show();
@@ -40,7 +40,7 @@ var p = new popelt({
 </div>
 <script type="text/javascript">
 $('#dmo_hello_world').click(function(){
-	var p = new popelt({title: 'Hello World!',
+	var p = new Popelt({title: 'Hello World!',
 		content: 'Lorem ipsum dolar sit amet.',
 		modal: false
 	}).show();
@@ -55,7 +55,7 @@ $('#dmo_hello_world').click(function(){
 Popup with 2 buttons 
 
 <pre class="code">
-var p = new popelt({
+var p = new Popelt({
     title: 'Are you sure you want to do this?',
     content: ''
 });
@@ -67,7 +67,7 @@ p.show();
 </div>
 <script type="text/javascript">
 $('#dmo_buttons').click(function(){
-	var p = new popelt({
+	var p = new Popelt({
 		title: 'Are you sure you want to do this?',
 		content: '',
 		closeButton: false,
@@ -91,7 +91,7 @@ $('#dmo_buttons').click(function(){
 Giving specific offset from top and width to the popup
 
 <pre class="code">
-var p = new popelt({title: 'Testing offset and width',
+var p = new Popelt({title: 'Testing offset and width',
     content: 'Lorem ipsum dolar sit amet.',
     offsetTop: 40,
     width: 300
@@ -100,7 +100,7 @@ var p = new popelt({title: 'Testing offset and width',
 </div>
 <script type="text/javascript">
 $('#dmo_offset').click(function(){
-	var p = new popelt({title: 'Testing offset and width',
+	var p = new Popelt({title: 'Testing offset and width',
 		content: 'Lorem ipsum dolar sit amet.',
 		offsetTop: 40,
 		width: 300
@@ -116,7 +116,7 @@ $('#dmo_offset').click(function(){
 Giving specific offset from top and width to the popup
 
 <pre class="code">
-var p = new popelt({title: 'A close test',
+var p = new Popelt({title: 'A close test',
     content: "Hover on the close (&times;) button for tooltip" + 
             "Now click on the below 'Dismiss' link" +
             "&lt;a href='#' class='btn-close'&gt;Dismiss&lt;/a&gt;" +
@@ -128,7 +128,7 @@ var p = new popelt({title: 'A close test',
 </div>
 <script type="text/javascript">
 $('#dmo_close').click(function(){
-	var p = new popelt({title: 'A close test',
+	var p = new Popelt({title: 'A close test',
         content: "Hover on the close (&times;) button for tooltip<br /><br />" + 
 				"Now click on the below 'Dismiss' link<br /><br />" +
 				"<a href='#' class='btn-close'>Dismiss</a><br /><br />" +
@@ -147,7 +147,7 @@ $('#dmo_close').click(function(){
 Changing overlay color and opacity
 
 <pre class="code">
-var p = new popelt({
+var p = new Popelt({
     title: 'Overlay',
     content: "Some content",
     overlayColor: '#f00',
@@ -157,7 +157,7 @@ var p = new popelt({
 </div>
 <script type="text/javascript">
 $('#dmo_overlay').click(function(){
-	var p = new popelt({
+	var p = new Popelt({
 		title: 'Overlay',
 		content: "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>",
 		overlayColor: '#f00',
@@ -174,7 +174,7 @@ $('#dmo_overlay').click(function(){
 Changes the fading animation speed while closing
 
 <pre class="code">
-var p = new popelt({
+var p = new Popelt({
     title: 'Overlay',
     content: "Some content",
     fadeSpeed: 2000
@@ -183,7 +183,7 @@ var p = new popelt({
 </div>
 <script type="text/javascript">
 $('#dmo_fadespeed').click(function(){
-	var p = new popelt({
+	var p = new Popelt({
 		title: 'Overlay',
 		content: "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>",
 		fadeSpeed: 2000
@@ -201,7 +201,7 @@ Retrieving AJAX content.<br />
 Also, the <strong>focus</strong> attribute focuses on the first input element inside content.
 
 <pre class="code">
-var p = new popelt({
+var p = new Popelt({
     contentType: 'ajax',
     loadUrl: 'ajax.html',
     focus: true
@@ -212,7 +212,7 @@ p.show();
 </div>
 <script type="text/javascript">
 $('#dmo_ajax').click(function(){
-	var p = new popelt({
+	var p = new Popelt({
 		contentType: 'ajax',
 		loadUrl: 'ajax.html',
 		focus: true
@@ -230,7 +230,7 @@ $('#dmo_ajax').click(function(){
 Retrieving Iframe content.<br />
 
 <pre class="code">
-var p = new popelt({
+var p = new Popelt({
     contentType: 'iframe',
     loadUrl: "//www.youtube.com/embed/tRVC4BKWaP8",
     iframeWidth: '100%',
@@ -242,7 +242,7 @@ p.show();
 </div>
 <script type="text/javascript">
 $('#dmo_iframe').click(function(){
-	var p = new popelt({
+	var p = new Popelt({
 		contentType: 'iframe',
 		loadUrl: "//www.youtube.com/embed/tRVC4BKWaP8",
 		iframeWidth: '100%',
@@ -270,14 +270,14 @@ Oh yeah ;)
 </div>
 
 <pre class="code">
-var p = new popelt({
+var p = new Popelt({
     contentType: '#test_id_content'
 }).show();
 </pre>
 </div>
 <script type="text/javascript">
 $('#dmo_tplcontent').click(function(){
-	var p = new popelt({
+	var p = new Popelt({
 		contentType: '#test_id_content'
 	}).show();
 });
@@ -294,7 +294,7 @@ Applying max height to popup content
 <br /><br />
 
 <pre class="code">
-var p = new popelt({
+var p = new Popelt({
     title: 'This is title',
     contentType: 'ajax',
     loadUrl: 'ajax.html',
@@ -306,7 +306,7 @@ p.show();
 </div>
 <script type="text/javascript">
 $('#dmo_maxheight').click(function(){
-	var p = new popelt({
+	var p = new Popelt({
 		title: 'This is title',
 		contentType: 'ajax',
 		loadUrl: 'ajax.html',
@@ -325,7 +325,7 @@ Making the popup responsive
 <br /><br />
 
 <pre class="code">
-var p = new popelt({
+var p = new Popelt({
     title: 'This is title',
     content: "Some content,
     responsive: true
@@ -336,7 +336,7 @@ p.show();
 </div>
 <script type="text/javascript">
 $('#dmo_responsive').click(function(){
-	var p = new popelt({
+	var p = new Popelt({
 		title: 'This is title',
 		content: "<p><strong>Try resizing your browser.</strong></p><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>",
 		responsive: true
