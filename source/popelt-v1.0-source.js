@@ -1,13 +1,13 @@
-/*=================================================================================================
- * @name: popelt
+ /*=================================================================================================
+ * @name: Popelt
  * @type: jQuery
  * @author: (c) Elton Jain - @eltonjain
  * @demo: http://welbour.com
- * @version: 0.1
+ * @version: 1.0
  * @requires jQuery 1.9.1
  *=================================================================================================*/
 (function ($) {
-function popelt(params){
+function Popelt(params){
 	var _self = this;
 	
 	//////////////////////////////////////
@@ -21,6 +21,7 @@ function popelt(params){
 	  , _prefix			= '__pop'
 	  , _btnCloseClass	= 'pop-btn-close'
 	  , _closeClass		= 'pop-close'
+	  , _popBtnClass	= 'pop-btn'
 	  , _popOverlayClass = 'pop-screen'
 	  , _popClass 		= 'pop-wrap'
 	  , _popContentClass = 'pop-content'
@@ -32,13 +33,13 @@ function popelt(params){
 	// imaginary global variables
 	if(!$.isArray(_w._popups_open)) _w._popups_open = [];
 	// _w.popup_current_id
-	// _w._popups_open_count = 0;
+	if(!_w._popups_open_count) _w._popups_open_count = 0;
 
 	//////////////////////////////////////
 	// DEFAULTS
 	//////////////////////////////////////
 	var defaults = {
-		modal			: true
+		modal			: false
 		, title			: false
 		, content		: ''
 		, offsetTop		: -1
@@ -101,7 +102,7 @@ function popelt(params){
 					if( $.isFunction(classname) ) {clickEvent = classname; classname = '';}
 				
 					var btn = $('<button>')
-							  .addClass('btn').addClass(v.classname)
+							  .addClass(_popBtnClass).addClass(v.classname)
 							  .text(v.label);
 					if(v.clickEvent) {btn.on('click', v.clickEvent);}	
 					actionPanel.append(btn);
@@ -205,10 +206,9 @@ function popelt(params){
 			$(this).remove();
 		});
 		
-		--_w._popups_open_count;
+		_w._popups_open_count--;
 		_w._popups_open.pop();
 		_w.popup_current_id = _w._popups_open[_w._popups_open.length-1];
-		
 		if(_w._popups_open_count == 0) $('body').removeClass('noscroll');
 
 		return false;
@@ -248,7 +248,7 @@ function popelt(params){
 			$(popWrap).on('click', '.'+_btnCloseClass, _self.close);
 		}
 		
-		if(o.modal === true){
+		if(o.modal !== true){
 			$('body').on('click', popOverlay+', '+popWrap, _self.close);
 			$('body').on('click', popWrap + ' .pop-block', function(e){
 				e.stopPropagation();
@@ -321,7 +321,7 @@ function popelt(params){
 				// dynamic height - coming soon
 				
 		} else if (o.contentType.indexOf('#') == 0){ // if template from #elementId
-			var content = $(o.contentType);
+			var content = $(o.contentType).html();
 			updateDomContent(content);
 		}
 	}
@@ -348,62 +348,5 @@ function popelt(params){
 		$('.'+_popClass+'.'+_id + ' .pop-container').css('margin-top', _new_top);	
 	}
 };
-window.popelt = popelt;
+window.Popelt = Popelt;
 } (jQuery));
-// if ajax, show preloader image [later]
-
-$(document).ready(function(){
-	  var p = new popelt({title: 'This is heading',
-		//buttons: [{label:'Save', clickEvent:function(){alert('This is hello button');}}]
-		//contentType: 'ajax',
-		//loadUrl: 'ajax.html',
-		content: 'Hello World!'
-	});
-	p.addButton('Do something',function(){
-		var q = new popelt({
-			title: 'Pop some cash'
-		});
-		q.show()
-	});
-	p.addCloseButton();
-	p.show();
-});
-
-
-
-
-/*	
-	Required: jquery version 1.9.1+
-	
-	Parameters
-	- modal
-	- title
-	- content
-	- width
-	- maxHeight // max content height
-	- buttons (Array) (label [,class] [,clickEvent])
-	- contentType [ajax,iframe,#elementID]
-	- loadUrl
-	- iframeHeight
-	- iframeWidth
-	- fadeSpeed (jquery speed)
-	- closeClass // with or without '.'
-	- keyEsc
-	- focus [true,false] // focus on first input
-	- offsetTop // if no offsetTop, default would be valign
-	- responsive // [true,false]
-	- closeButton // default close 'X' button
-	- closeBtnTooltip (String, default 'Close')
-	- overlayOpacity // css 'opacity'
-	- overlayColor // css color
-
-	Methods
-	- addButton(label [,class] [,clickevent])
-	- setContent("String/Html")
-	- show() / showPopup()
-	- close() / closePopup()
-	- addOKButton()
-	- addCloseButton()
-	- addCancelButton()
-
-*/
