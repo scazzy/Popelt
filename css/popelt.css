@@ -1,0 +1,14 @@
+ /*=================================================================================================
+ * @name: Popelt plugin CSS
+ * @author: (c) Elton Jain - @eltonjain
+ *=================================================================================================*/
+.noscroll {overflow:hidden;}
+.pop-screen {background:#000; opacity:0.9; filter:alpha(90); position:fixed; left:0; top:0; right:0; bottom:0; z-index:9994; display:none;}
+.pop-wrap {position:fixed; left:0;right:0;top:0;bottom:0; z-index:9995; overflow:auto; display:none; }
+.pop-container {margin:40px auto; display:block; width:600px; background:white; position:relative;}
+.pop-block {position:relative;}
+.pop-content {padding:20px; color:#333; word-wrap:break-word; overflow:auto;}
+.pop-content h1:first-child, .pop-content h2:first-child, .pop-content p:first-child {margin-top:0;}
+.pop-action-block {background:#eee; padding:15px 20px; border-top:1px solid #ccc; text-align:right;}
+.pop-title {margin:0; padding-bottom:10px; font-size:26px; font-weight:bold; line-height:28px; padding:20px; margin-bottom:0;}
+.pop-btn-close {font-family:arial,sans-serif; position:absolute; color:#888; font-size:28px; width:30px; height:30px; line-height:31px; text-align:center; cursor:pointer; right:0px; top:0px; background:white;}
