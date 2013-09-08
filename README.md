@@ -31,7 +31,7 @@ Download: [Minified](https://github.com/scazzy/Popelt/blob/master/minified/popel
 ### Example
 
 <pre class="code">
-var MyPopup = new popelt({
+var MyPopup = new Popelt({
     title: 'Pop some cash',
     content: ''Hey wasup! This is my content.'
 }).show();
