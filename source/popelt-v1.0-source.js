@@ -7,6 +7,11 @@
  * @requires jQuery 1.9.1
  *=================================================================================================*/
 (function ($) {
+// imaginary global variables in scope
+var _popups_open = [],
+	_popups_open_count = 0,
+	_popups = null,
+	_popup_current_id = null;
 function Popelt(params){
 	var _self = this;
 	
@@ -30,10 +35,6 @@ function Popelt(params){
 	  , _id
 	  , _zIndex			= 9000
 	;
-	// imaginary global variables
-	if(!$.isArray(_w._popups_open)) _w._popups_open = [];
-	// _w.popup_current_id
-	if(!_w._popups_open_count) _w._popups_open_count = 0;
 
 	//////////////////////////////////////
 	// DEFAULTS
@@ -64,9 +65,9 @@ function Popelt(params){
 	var o = $.extend(defaults, params);
 	
 	_self.init = function(){
-		_w._popups = (_w._popups || 0) + 1;
-		_id = _prefix + _w._popups + '__';
-		_zIndex +=  _w._popups;
+		_popups = (_popups || 0) + 1;
+		_id = _prefix + _popups + '__';
+		_zIndex +=  _popups;
 	};
 	
 	_self.setContent = function(content){
@@ -150,9 +151,9 @@ function Popelt(params){
 		recenter();
 		
 		// Update number of open popups
-		_w._popups_open_count++;
-		_w._popups_open.push(_id);
-		_w.popup_current_id = _id;
+		_popups_open_count++;
+		_popups_open.push(_id);
+		_popup_current_id = _id;
 
 		// Adding noscroll to body
 		if($('body').not('.noscroll')){$('body').addClass('noscroll');}
@@ -192,7 +193,7 @@ function Popelt(params){
 	
 	_self.closePopup = function(e){
 		// closing specific popup if given, else 
-		popupId = _w.popup_current_id ? _w.popup_current_id : _id;
+		popupId = _popup_current_id ? _popup_current_id : _id;
 		
 		unbindEvents(popupId);
 		
@@ -206,10 +207,10 @@ function Popelt(params){
 			$(this).remove();
 		});
 		
-		_w._popups_open_count--;
-		_w._popups_open.pop();
-		_w.popup_current_id = _w._popups_open[_w._popups_open.length-1];
-		if(_w._popups_open_count == 0) $('body').removeClass('noscroll');
+		_popups_open_count--;
+		_popups_open.pop();
+		_popup_current_id = _popups_open[_popups_open.length-1];
+		if(_popups_open_count == 0) $('body').removeClass('noscroll');
 
 		return false;
 	};
@@ -283,7 +284,7 @@ function Popelt(params){
 		_d.on('keydown.'+_id, function(e) {
 			if (e.which == 27) {  //escape
 				e.stopImmediatePropagation();
-				_self.close(_w.popup_current_id);
+				_self.close(_popup_current_id);
 				return false;
 			}
 		});
