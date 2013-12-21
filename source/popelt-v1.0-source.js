@@ -91,7 +91,7 @@ function Popelt(params){
 			}
 			
 			if(o.content){
-				popContent.append(o.content).appendTo(popContent);
+				popContent.append(o.content);
 			}
 			
 			if(o.buttons.length){
