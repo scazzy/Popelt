@@ -61,6 +61,9 @@ function Popelt(params){
 		, responsive	: false
 		, overlayColor	: false
 		, overlayOpacity: false
+		, popupColor    : false
+		, popupText    	: false
+		, popupClass    : false
 	};
 	var o = $.extend(defaults, params);
 	
@@ -115,6 +118,9 @@ function Popelt(params){
 			}
 			
 			popBlock = $('<div>').addClass('pop-block');
+			if(o.popupColor){popBlock.css('background',o.popupColor);}
+			if(o.popupText){popBlock.css('color',o.popupText);}
+			if(o.popupClass){popBlock.addClass(o.popupClass);}
 			
 			if(o.closeButton !== false) {
 				var closeButton = $('<span>').addClass('pop-btn-close').html('&times;');
