@@ -1,6 +1,6 @@
 # Popelt
 
-### Lightweight Modal Popup jQuery Plugin
+### A Lightweight Responsive Dynamic Modal Popup jQuery Library
 
 * * *
 
