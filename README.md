@@ -4,7 +4,7 @@
 
 * * *
 
-Check: [Demo](http://welbour.com/labs/popelt/) &nbsp;
+Check: [Demo](http://labs.welbour.com/popelt/) &nbsp
 [Github](https://github.com/scazzy/Popelt)
 
 Download: [Minified](https://github.com/scazzy/Popelt/blob/master/minified/popelt-v1.0.min.js)<small>(5kb)</small> &nbsp; [Source](https://github.com/scazzy/Popelt/blob/master/source/popelt-v1.0-source.js)
@@ -16,12 +16,12 @@ Download: [Minified](https://github.com/scazzy/Popelt/blob/master/minified/popel
 
 *   Modal
 *   Responsive
-*   Dyanmic Buttons
+*   Dynamic Buttons
 *   Dynamic content - **Ajax**, **Iframe**, or **template**
 *   First input focus
 *   Dynamic positioning
 *   Escape to close
-*   Multiple / nested popups
+*   Multiple / nested popups and open stack handling
 *   Dynamic overlay background color and opacity
 *   Simple to use
 *   IE7+ compatibility
@@ -307,7 +307,7 @@ var MyPopup = new Popelt({
 
 * * *
 
-Check: [Demo](http://welbour.com/labs/popelt/) &nbsp;
+Check: [Demo](http://labs.welbour.com/popelt/) &nbsp;
 [Github](https://github.com/scazzy/Popelt)
 
 Download: [Minified](https://github.com/scazzy/Popelt/blob/master/minified/popelt-v1.0.min.js)<small>(5kb)</small> &nbsp; [Source](https://github.com/scazzy/Popelt/blob/master/source/popelt-v1.0-source.js)
