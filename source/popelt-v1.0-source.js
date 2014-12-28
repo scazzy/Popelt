@@ -136,6 +136,8 @@ function Popelt(params){
 			popHtml = $('<div>').addClass(_popClass).addClass(_id).css('z-index',_zIndex+1).append(popContainer);
 			$('body').append(popOverlay);
 			$('body').append(popHtml);
+		} else {
+			$('.' + _popContentClass, $('.' + _popClass + '.' + _id)).empty().append(o.content);
 		}
 
 		// if external content, first show popup and fetch and directly show data in dom element
