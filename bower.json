@@ -1,13 +1,12 @@
 {
-  "name": "Popelt",
-  "version": "1.0.0",
-  "main": "minified/popelt-v1.0.min.js",
-  "ignore": [
-    ".jshintrc",
-    "**/*.txt"
-  ],
-  "dependencies": {
-    "jquery": ">1.9.1",
-    
-  },
+    "name": "Popelt",
+    "version": "1.0.0",
+    "main": "minified/popelt-v1.0.min.js",
+    "ignore": [
+        ".jshintrc",
+        "**/*.txt"
+    ],
+    "dependencies": {
+        "jquery": ">1.9.1"
+    }
 }
