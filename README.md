@@ -4,7 +4,7 @@
 
 * * *
 
-Check: [Demo](http://labs.welbour.com/popelt/) &nbsp
+Check: [Demo](http://labs.welbour.com/popelt/) &
 [Github](https://github.com/scazzy/Popelt)
 
 Download: [Minified](https://github.com/scazzy/Popelt/blob/master/minified/popelt-v1.0.min.js)<small>(5kb)</small> &nbsp; [Source](https://github.com/scazzy/Popelt/blob/master/source/popelt-v1.0-source.js)
