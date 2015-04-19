@@ -1,82 +1,358 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
+    <meta charset="UTF-8">
     <title>Popelt by scazzy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
-    <header>
-      <div class="inner">
-        <h1>Popelt</h1>
-        <h2>A lightweight responsive jquery dynamic modal popup library</h2>
-        <a href="https://github.com/scazzy/Popelt---Lightweight-responsive-jQuery-popup-library" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
+    <section class="page-header">
+      <h1 class="project-name">Popelt</h1>
+      <h2 class="project-tagline">A lightweight responsive jquery dynamic modal popup library</h2>
+      <a href="https://github.com/scazzy/Popelt" class="btn">View on GitHub</a>
+      <a href="https://github.com/scazzy/Popelt/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/scazzy/Popelt/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+    <section class="main-content">
+      <h1>
+<a id="popelt" class="anchor" href="#popelt" aria-hidden="true"><span class="octicon octicon-link"></span></a>Popelt</h1>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a id="a-lightweight-responsive-dynamic-modal-popup-jquery-library" class="anchor" href="#a-lightweight-responsive-dynamic-modal-popup-jquery-library" aria-hidden="true"><span class="octicon octicon-link"></span></a>A Lightweight Responsive Dynamic Modal Popup jQuery Library</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<hr>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<p>Check: <a href="http://labs.welbour.com/popelt/">Demo</a> &amp;nbsp
+<a href="https://github.com/scazzy/Popelt">Github</a></p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>Download: <a href="https://github.com/scazzy/Popelt/blob/master/minified/popelt-v1.0.min.js">Minified</a>(5kb)   <a href="https://github.com/scazzy/Popelt/blob/master/source/popelt-v1.0-source.js">Source</a></p>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<hr>
 
 <h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </section>
+<ul>
+<li>  Modal</li>
+<li>  Responsive</li>
+<li>  Dynamic Buttons</li>
+<li>  Dynamic content - <strong>Ajax</strong>, <strong>Iframe</strong>, or <strong>template</strong>
+</li>
+<li>  First input focus</li>
+<li>  Dynamic positioning</li>
+<li>  Escape to close</li>
+<li>  Multiple / nested popups and open stack handling</li>
+<li>  Dynamic overlay background color and opacity</li>
+<li>  Simple to use</li>
+<li>  IE7+ compatibility</li>
+<li>  Extreme Lightweight (just ~5kb compressed)</li>
+</ul>
 
-        <aside id="sidebar">
-          <a href="https://github.com/scazzy/Popelt---Lightweight-responsive-jQuery-popup-library/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/scazzy/Popelt---Lightweight-responsive-jQuery-popup-library/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+<h3>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h3>
 
-          <p class="repo-owner"><a href="https://github.com/scazzy/Popelt---Lightweight-responsive-jQuery-popup-library"></a> is maintained by <a href="https://github.com/scazzy">scazzy</a>.</p>
+<pre>
+var MyPopup = new Popelt({
+    title: 'Pop some cash',
+    content: ''Hey wasup! This is my content.'
+}).show();
+</pre>
 
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
-    </div>
+<h3>
+<a id="methods" class="anchor" href="#methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods</h3>
+
+<table>
+    <tr>
+        <th>Method name</th>
+        <th>Parameters</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>addButton</td>
+        <td>label [,class] [,clickEvent]</td>
+        <td>
+            **label** - Name on button
+
+            **class** - custom class to give to the button [optional]
+
+            **clickEvent** - Function to execute on click of button. If not provided, by default triggers popup close [optional]
+        </td>
+    </tr>
+    <tr>
+        <td>setContent</td>
+        <td>content</td>
+        <td>
+            **content** - Body content of the popup
+
+            Can be HTML or Plain text
+        </td>
+    </tr>
+    <tr>
+        <td>show
+
+            showPopup
+        </td>
+        <td>-</td>
+        <td>Show the popup</td>
+    </tr>
+    <tr>
+        <td>close
+
+            closePopup
+
+        </td>
+        <td>-</td>
+        <td>
+            Close the popup
+        </td>
+    </tr>
+    <tr>
+        <td>addOKButton</td>
+        <td>clickEvent</td>
+        <td>
+            Add a button with "OK" as label
+
+            **clickEvent** - On click event
+        </td>
+    </tr>
+    <tr>
+        <td>addCloseButton</td>
+        <td>-</td>
+        <td>
+            Add a button with "Close" as label. It will close the popup
+        </td>
+    </tr>
+    <tr>
+        <td>addCancelButton</td>
+        <td>-</td>
+        <td>
+            Add a button with "Cancel" as label. It will close the popup
+        </td>
+    </tr>
+
+</table>
+
+<h3>
+<a id="settings--attributes" class="anchor" href="#settings--attributes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Settings / Attributes</h3>
+
+<table>
+    <tr>
+        <th>Setting</th>
+        <th>Values</th>
+        <th>Default</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>modal</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>**true** or **false**</td>
+    </tr>
+    <tr>
+        <td>title</td>
+        <td>text</td>
+        <td></td>
+        <td>_Not displayed if empty_</td>
+    </tr>
+    <tr>
+        <td>content</td>
+        <td>string / html</td>
+        <td></td>
+        <td>Popup body content.
+
+            HTML or Text string.
+
+            _Not displayed if empty_
+        </td>
+    </tr>
+    <tr>
+        <td>width</td>
+        <td>number</td>
+        <td>600</td>
+        <td>Width of the popup.
+
+            Accepts percent (%) or pixels (px)
+        </td>
+    </tr>
+    <tr>
+        <td>maxHeight</td>
+        <td>number</td>
+        <td></td>
+        <td>Give max height to the content container for longer content.
+
+            A scrollbar will appear if content overflows.
+        </td>
+    </tr>
+    <tr>
+        <td>offsetTop</td>
+        <td>number</td>
+        <td>vertically centered</td>
+        <td>If the popup needs to appear some pixels away from the top instead of being vertically centered.
+        </td>
+    </tr>
+    <tr>
+        <td>responsive</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td> **true** or **false**
+
+        Width of the popup will be maximum 100%;</td>
+    </tr>
+    <tr>
+        <td>closeButton</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>Display the **"×"** close button on top right.</td>
+    </tr>
+    <tr>
+        <td>closeBtnTooltip</td>
+        <td>text</td>
+        <td>"Close"</td>
+        <td>Tooltip for the default **"×"** clsoe button on top right.
+
+            Give **false** if to hide.
+     </td>
+    </tr>
+    <tr>
+        <td>overlayColor</td>
+        <td>CSS Color</td>
+        <td>black</td>
+        <td>Change color of the overlay background.
+
+            Accepts CSS color names or hex color codes.
+        </td>
+    </tr>
+    <tr>
+        <td>overlayOpacity</td>
+        <td>0.0 - 1.0</td>
+        <td>0.9</td>
+        <td>Transparency of overlay background. Accepts CSS '_opacity_' values.</td>
+    </tr>
+    <tr>
+        <td>focus</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>If want to focus on the first '_input_' or '_textarea_' when the popup is opened.</td>
+    </tr>
+    <tr>
+        <td>escClose</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>Allow popup to close by pressing "Escape" or "Esc" key.</td>
+    </tr>
+    <tr>
+        <td>closeClass</td>
+        <td>string</td>
+        <td>"pop-close"</td>
+        <td>If want any link **&lt;a&gt;** or **button** or any element inside your content to trigger **popup close**, give it this classname.</td>
+    </tr>
+    <tr>
+        <td>fadeSpeed</td>
+        <td>number</td>
+        <td>200</td>
+        <td>Speed of fade animation while closing popup. Accepts jquery speed value for fadeOut.</td>
+    </tr>
+    <tr>
+        <td>buttons</td>
+        <td>Array object</td>
+        <td></td>
+        <td>Syntax:
+
+            <pre>[{ label [,classname] [,clickEvent]}]</pre>
+
+            Example:
+
+<pre>
+[
+  { label: 'Save changes', 
+    classname: 'primary', 
+    clickEvent: function(){alert('Saving changes');}
+  },
+  { label: 'Close'}
+]</pre>
+        </td>
+    </tr>
+    <tr>
+        <td>contentType</td>
+        <td>**"ajax"** or **"iframe"** or **#elementID**</td>
+        <td></td>
+        <td>
+            You can add dynamic content via AJAX, or embed a video or a webpage using iframe,
+
+            or take the content from an existing element in the DOM using '#' (for element ID).
+        </td>
+    </tr>
+    <tr>
+        <td>loadUrl</td>
+        <td>string</td>
+        <td></td>
+        <td>Applied for contentType AJAX and Iframe.
+
+            Source URL to load via AJAX or iframe.
+
+            _Note: Currently do not support cross-domain URL for AJAX_
+        </td>
+    </tr>
+    <tr>
+        <td>iframeHeight</td>
+        <td>number</td>
+        <td>300px</td>
+        <td>Set height for Iframe content.
+
+            Accepts percent (%) or pixels (px)
+
+            _Dynamic height coming soon._
+        </td>
+    </tr>
+    <tr>
+        <td>iframeWidth</td>
+        <td>number</td>
+        <td>100%</td>
+        <td>Set width for the Iframe content.
+
+            Accepts percent (%) or pixels (px)
+        </td>
+    </tr>
+</table>
+
+<h3>
+<a id="requires" class="anchor" href="#requires" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requires</h3>
+
+<ul>
+<li>  jQuery 1.9.1 or above</li>
+</ul>
+
+<h3>
+<a id="coming-soon" class="anchor" href="#coming-soon" aria-hidden="true"><span class="octicon octicon-link"></span></a>Coming soon</h3>
+
+<ul>
+<li>  IFrame dynamic height - Auto content height</li>
+<li>  Forms - Built in form submitting from popup</li>
+</ul>
+
+<hr>
+
+<p>Check: <a href="http://labs.welbour.com/popelt/">Demo</a>  
+<a href="https://github.com/scazzy/Popelt">Github</a></p>
+
+<p>Download: <a href="https://github.com/scazzy/Popelt/blob/master/minified/popelt-v1.0.min.js">Minified</a>(5kb)   <a href="https://github.com/scazzy/Popelt/blob/master/source/popelt-v1.0-source.js">Source</a></p>
+
+<hr>
+
+<p>Develped by Elton Jain / <a href="http://twitter.com/eltonjain">@eltonjain</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/scazzy/Popelt">Popelt</a> is maintained by <a href="https://github.com/scazzy">scazzy</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
 
             <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -91,3 +367,4 @@ $ git checkout gh-pages
 
   </body>
 </html>
+
