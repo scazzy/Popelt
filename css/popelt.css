@@ -3,7 +3,7 @@
  * @author: (c) Elton Jain - @eltonjain
  *=================================================================================================*/
 .noscroll {overflow:hidden;}
-.pop-screen {background:#000; opacity:0.9; filter:alpha(90); position:fixed; left:0; top:0; right:0; bottom:0; z-index:9994; display:none;}
+.pop-screen {background:#000; opacity:0.9; filter:alpha(opacity=90); position:fixed; left:0; top:0; right:0; bottom:0; z-index:9994; display:none;}
 .pop-wrap {position:fixed; left:0;right:0;top:0;bottom:0; z-index:9995; overflow:auto; display:none; }
 .pop-container {margin:40px auto; display:block; width:600px; background:white; position:relative;}
 .pop-block {position:relative;}
